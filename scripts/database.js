@@ -1,19 +1,22 @@
-Hooks.once('sequencer.ready', () => {
-        const PATH = "modules/animated-spell-effects-cartoon/spell-effects/cartoon";
-        const cartoonDatabase = {
+export const PATH = "modules/animated-spell-effects-cartoon/spell-effects/cartoon";
+export const cartoonDatabase = {
             "air": {
                 "blast": {
                     "circle": `${PATH}/air/air_blast_CIRCLE_01.webm`,
-                    "cone": `${PATH}/air/air_blast_CONE_01.webm`,
-                    "cone": `${PATH}/air/air_blast_CONE_02.webm`,
-                    "cone": `${PATH}/air/air_blast_CONE_03.webm`,
-                    "cone": `${PATH}/air/air_blast_CONE_04.webm`,
-                    "cone": `${PATH}/air/air_blast_CONE_05.webm`,
+                    "cone": [
+                        `${PATH}/air/air_blast_CONE_01.webm`,
+                        `${PATH}/air/air_blast_CONE_02.webm`,
+                        `${PATH}/air/air_blast_CONE_03.webm`,
+                        `${PATH}/air/air_blast_CONE_04.webm`,
+                        `${PATH}/air/air_blast_CONE_05.webm`,
+                    ],
                 },
                 "bolt": {
                     "ray": `${PATH}/air/air_bolt_RAY_01.webm`,
-                    "square": `${PATH}/air/air_bolt_SQUARE_01.webm`,
-                    "square": `${PATH}/air/air_bolt_SQUARE_02.webm`,
+                    "square": [
+                        `${PATH}/air/air_bolt_SQUARE_01.webm`,
+                        `${PATH}/air/air_bolt_SQUARE_02.webm`,
+                    ],
                 },
                 "explosion": {
                     "gray": `${PATH}/air/air_explosion_800x800.webm`,
@@ -930,7 +933,4 @@ Hooks.once('sequencer.ready', () => {
                 },
                 "water wall": `${PATH}/water/water_wall_RECTANGLE_01.webm`,
             },
-        };
-        Sequencer.Database.registerEntries('animated-spell-effects-cartoon', cartoonDatabase);
-    
-});
+};

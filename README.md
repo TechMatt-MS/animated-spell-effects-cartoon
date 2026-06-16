@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Foundry-v10.230-informational)
+![](https://img.shields.io/badge/Foundry-v13%20%7C%20v14-informational)
 <!--- Downloads @ Latest Badge -->
 <!--- replace <user>/<repo> with your username/repository -->
 <!--- ![Latest Release Download Count](https://img.shields.io/github/downloads/jackkerouac/animated-spell-effects-cartoon/latest/module.zip) -->
@@ -15,8 +15,25 @@ More than 350 (and growing!) animated cartoon effects for spells for use with va
 
 Preview/Download: https://github.com/jackkerouac/animated-spell-effects-cartoon
 
-Requires FVTT version 0.5.5 or higher.
+Requires Foundry VTT v13 or v14.
 
 Use this manifest link in Foundry VTT:
 
-https://raw.githubusercontent.com/jackkerouac/animated-spell-effects-cartoon/main/module.json
+https://github.com/TechMatt-MS/animated-spell-effects-cartoon/releases/latest/download/module.json
+
+# Requirements
+
+- Foundry VTT **v13 or v14**.
+- Recommended: [Sequencer](https://github.com/fantasycalendar/FoundryVTT-Sequencer) and [Automated Animations](https://github.com/theripper93/autoanimations).
+
+# Instructions
+
+When **Sequencer** is active, every effect in this module is registered with the **Sequencer Database** under the `animated-spell-effects-cartoon` namespace (for example `animated-spell-effects-cartoon.air.blast.cone`). That makes them usable anywhere that reads the Sequencer Database:
+
+- **Automated Animations** – add or scan a custom animation and search the database for `animated-spell-effects-cartoon`.
+- **Sequencer Effect Player** – browse and place the effects directly from the Sequencer canvas controls.
+- **Sequencer / pf2e-jb2a-macros macros** – reference them by their database path or file path.
+
+You can also place an effect without any other module: as a GM, click the **wand button in the Token controls** (or bind a key in Configure Controls) to open the built-in browser, pick an effect, then click the canvas to drop it as a looping video Tile (or play it once if Sequencer/FXMaster is present).
+
+> Note: the bundled dnd5e compendium packs (spells and macros) are unchanged and remain dnd5e-only. The animated effects themselves are system-agnostic and work in any system, including pf2e.

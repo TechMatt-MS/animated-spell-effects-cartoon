@@ -1,3 +1,11 @@
+### 1.0.0
+* Foundry v13 / v14 compatibility overhaul.
+* Modernized `module.json` (`id`, `compatibility`, `relationships`, co-author).
+* Refactored the Sequencer database into `scripts/database.js` and registered it via an ES module entry point (`scripts/main.js`).
+* FIXED: recovered 5 effects that were silently lost to duplicate object keys — `air.blast.cone` (CONE_01–04) and `air.bolt.square` (SQUARE_01). These are now arrays, so referencing the parent path plays a random variant and every file is reachable.
+* ADDED: a self-contained effect **browser** (wand button in the Token controls + a rebindable keybinding) to place effects on the canvas as Tiles, or as one-shots via Sequencer/FXMaster.
+* ADDED: a module API at `game.modules.get("animated-spell-effects-cartoon").api` and a welcome popup (DialogV2).
+
 ### 0.4.5
 * So I used to work at an orange juice factory ... but I got canned because I couldn't concentrate.
 * Added Concentration status effect
